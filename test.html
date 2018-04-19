@@ -22,8 +22,20 @@
 <body>
     111111111
 
+    <br/>
+    中文
+    <br/>
+    中文
+    <br/>
+    字体
+    <div id="test"></div>
+
     <script>
         //requirejs( [ 'MC.'], function(){ });
+        setTimeout( function(){
+            document.getElementById("test").innerHTML = "动态中文内容";
+            console.log( 'MAGIC_DONE' );
+        }, 500 );
     </script>
 </body>
 </html>
