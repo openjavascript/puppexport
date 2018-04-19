@@ -20,19 +20,14 @@ puppexport 环境依赖
         设置 PHP 超时为 120秒, 需要设置 php, php-fpm, nginx 3个地方
             请参考 https://www.scalescale.com/tips/nginx/504-gateway-time-out-using-nginx/
 
-        在项目根目录安装 puppeteer
+        安装文件导出命令
+            cnpm install -g puppexport
 
-            #转到项目根目录
-            cd {project_root}
-
-            #安装导出服务
-            cnpm i puppeteer
+        变更 node_modules 文件执行权限(非ROOT用户)
+            sudo chmod -R 755  /usr/lib/node_modules/puppexport/     
 
         测试命令是否运行正确
 
-            #转到项目根目录
-            cd {project_root}
-
             #执行测试命令
-            node ./bin/puppexport.js '{"url":"http://btbtd.com/topic/test/test.html","filepath":"/tmp/file_20180413_2.pdf"}'
+            puppexport '{"url":"http://btbtd.com/topic/test/test.html","filepath":"/tmp/file_20180413_2.pdf"}'
     
