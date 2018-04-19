@@ -1,6 +1,6 @@
 {
   "name": "puppexport",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "export file, such as pdf, png, word",
   "main": "bin/puppexport.js",
   "bin": {
