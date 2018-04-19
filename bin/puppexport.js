@@ -10,6 +10,7 @@ const printf = require( "../utils/printf.js" );
 const getArgs = require( "../utils/get_args.js" );
 
 const pdf = require( "../handler/pdf.js" );
+const syncPdf = require( "../handler/syncPdf.js" );
 
 let cmd_args = getArgs( process )
     , cmd = Const.cmd.pdf
@@ -33,7 +34,7 @@ if( !( cmd && data ) ){
 }
 
 if( !data.type ){
-	data.type = cmd;
+	data.type = ( data.filepath || 'pdf' ).replace( /^.*\./, '' ) || cmd;
 }
 
 data.DONE_LOG = data.DONE_LOG || Const.DONE_LOG;
@@ -46,9 +47,16 @@ console.log( 'cmd:', cmd, new Date().getTime() );
 console.dir( data );
 
 switch( cmd ){
+
     case Const.cmd.png: 
     case Const.cmd.pdf: {
         pdf( data );
+        break;
+    }
+
+    case Const.cmd.syncPng: 
+    case Const.cmd.syncPdf: {
+        syncPdf( data );
         break;
     }
 }

@@ -6,6 +6,9 @@ module.exports = {
     , "cmd": {
         "pdf": "pdf"
         , "png": "png"
+
+        , "syncPdf": "syncPdf"
+        , "syncPng": "syncPng"
     }
 
     , "msg": {
