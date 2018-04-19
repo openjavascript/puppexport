@@ -34,5 +34,5 @@ puppexport 环境依赖
             cd {project_root}
 
             #执行测试命令
-            node scripts/puppexport/puppexport.js '{"url":"http://btbtd.com/topic/test/test.html","filepath":"/tmp/file_20180413_2.pdf"}'
+            node ./bin/puppexport.js '{"url":"http://btbtd.com/topic/test/test.html","filepath":"/tmp/file_20180413_2.pdf"}'
     
