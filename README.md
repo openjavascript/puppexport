@@ -36,7 +36,7 @@
 
 ```
 usage:
-	node {approot}/scripts/puppexport/puppexport.js 'JSON String'
+	node ./bin/puppexport.js '{"url":"http://btbtd.com/topic/test/test.html","filepath":"/tmp/file_20180413_2.pdf"}'
 
 desc: 
 	目前是同步阻塞版本, node 命令执行完时, 会同步在 JSON.filepath 路径生成对应的文件, 
