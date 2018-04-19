@@ -21,7 +21,7 @@ puppexport 环境依赖
             请参考 https://www.scalescale.com/tips/nginx/504-gateway-time-out-using-nginx/
 
         安装文件导出命令
-            cnpm install -g puppexport
+            sudo cnpm install -g puppexport
 
         变更 node_modules 文件执行权限(非ROOT用户)
             sudo chmod -R 755  /usr/lib/node_modules/puppexport/     
