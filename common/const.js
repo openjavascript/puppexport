@@ -1,26 +1,18 @@
 
 module.exports = {
-    "teste": "teste"
-
-    , "notify": {
-        "cnpm_not_installed": "cnpm_not_installed"
-        , "install_done": "on_install_done"
+    "notify": {
     }
 
     , "cmd": {
-        "update": "onUpdate"
-        , "up": "onUpdate"
-
-        , "build": "onBuild"
-        , "bu": "onBuild"
-
-        , "install": "onInstall"
-        , "ins": "onInstall"
-
-        , "stc": "onInitStc"
+        "pdf": "pdf"
+        , "png": "png"
     }
 
     , "msg": {
         "taketime": "this may take a few minutes"
     }
+
+    , "DONE_LOG": "MAGIC_DONE"
+    , "MAX_TIME": 120
+
 };

@@ -13,7 +13,6 @@ module.exports = {
     }
 
     , "files": {
-        "stc": "http://pub.qsw.skycamp.cn/files/stc.zip"
     }
 
 };

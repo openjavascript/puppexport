@@ -1,0 +1,34 @@
+{
+  "name": "puppexport",
+  "version": "1.0.0",
+  "description": "export file, such as pdf, png, word",
+  "main": "bin/puppexport.js",
+  "bin": {
+    "puppexport": "bin/puppexport.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openjavascript/puppexport.git"
+  },
+  "keywords": [
+    "puppeteer",
+    "export",
+    "pdf",
+    "png",
+    "word"
+  ],
+  "author": "suches@btbtd.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/openjavascript/puppexport/issues"
+  },
+  "homepage": "https://github.com/openjavascript/puppexport#readme",
+  "dependencies": {
+    "colors": "^1.2.1",
+    "puppeteer": "^1.3.0",
+    "shelljs": "^0.8.1"
+  }
+}
