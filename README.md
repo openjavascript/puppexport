@@ -36,7 +36,7 @@
 
 ```
 usage:
-    node ./bin/puppexport.js '{"url":"http://btbtd.com/topic/test/test.html","filepath":"/tmp/file_20180413_2.pdf"}'
+	node {approot}/scripts/puppexport/puppexport.js 'JSON String'
 
 desc: 
 	目前是同步阻塞版本, node 命令执行完时, 会同步在 JSON.filepath 路径生成对应的文件, 
@@ -48,6 +48,13 @@ data format:
 
 		存的文件路径, 需要保证文件名的维一性, 注意扩展名( pdf ), 目前支持( png, pdf )
 		"filepath": "/home/suches/udocs/website/pupp.me.btbtd.com/project/v1/cache/file_20180411.pdf",
+
+		//请求超时时间, 单位秒, 默认120秒 
+		"MAX_TIME": 120,
+
+		//用于识别页面加载完毕的 console.log, 默认 MAGIC_DONE 
+		//页面可以导出时, 在页面执行 console.log( 'MAGIC_DONE' )
+		"DONE_LOG": "MAGIC_DONE",
 
 		//每个cookie 的 key 都是 object 对象
 		"cookies": [
@@ -77,7 +84,6 @@ data format:
 
 		]
 	}
-
 ```
 
 ## 可用命令
