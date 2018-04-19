@@ -79,3 +79,10 @@ data format:
 	}
 
 ```
+
+## 可用命令
+   puppexport {json string}          //异步导出, 页面console.log( 'MAGIC_DONE' ) 时, 执行导出命令
+   puppexport png {json string}      //异步导出, 页面console.log( 'MAGIC_DONE' ) 时, 执行导出命令
+   
+   puppexport syndPdf {json string}  //同步导出
+   puppexport syncPng {json string}  //同步导出
