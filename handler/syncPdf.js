@@ -77,9 +77,20 @@ module.exports = function( data ){
                         , bottom: "0"
                         , left: "0"
                     }
+                }).then( ()=>{
+                    console.log( 'MAGIC_DONE fire from puppexport.js', new Date().getTime() );
+                    exit( browser );
+                }, ()=>{
+                    console.log( 'make pdf error occur' );
+                    exit( browser );
                 });
             }
         }
+
+        setTimeout( ()=>{
+            exit( browser );
+        }, 1000 * 120 );
+
         await browser.close();
 
         process.exit( 1 );

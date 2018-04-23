@@ -10,6 +10,9 @@ const Config = require( '../common/config.js' );
 const Const = require('../common/const.js');
 const printf = require( "../utils/printf.js" );
 const getArgs = require( "../utils/get_args.js" );
+const makepath = require( "../utils/makepath.js" );
+
+const fs = require( 'fs' );
 
 function exit( browser ){
     browser.close();
@@ -18,6 +21,10 @@ function exit( browser ){
 
 module.exports = function( data ){
     console.log( 'fire Const.cmd.pdf', new Date().getTime() );
+    if( data && data.filepath ){
+        makepath( data.filepath );
+    }
+
     return (async () => {
 
         const browser = await puppeteer.launch( 
@@ -95,10 +102,16 @@ module.exports = function( data ){
                         }).then( ()=>{
                             console.log( 'MAGIC_DONE fire from puppexport.js', new Date().getTime() );
                             exit( browser );
+                        }, ()=>{
+                            console.log( 'make pdf error occur' );
+                            exit( browser );
                         });
                     }
                 }
             }
+            setTimeout( ()=>{
+                exit( browser );
+            }, 1000 * 120 );
             await page.goto( data.url );
         });
         ;
